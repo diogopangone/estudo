@@ -18,6 +18,7 @@ public class EstudoApplication {
 
 		PessoaController pessoaController = new PessoaController();
 
+
 		pessoaController.cadastrar("Diego", 36, new Date(), 1000.00F, "12345678900");
 	}
 
