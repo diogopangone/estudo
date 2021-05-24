@@ -1,9 +1,14 @@
 package br.com.diogo.estudo.spring.pessoa;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class PessoaBusinnes {
 
-
-
+    @Autowired
+    PessoaRepository pessoaRepository;
 
     public void validarEcadastrar(PessoaVO pessoa){
 
@@ -15,10 +20,16 @@ public class PessoaBusinnes {
             throw new RuntimeException("Idate da pessoa é obrigatório!");
         }
 
-        PessoaRepository pessoaRepository = new PessoaRepository();
-
         pessoaRepository.cadastrarNaBaseDados(pessoa);
 
+    }
+
+    public void cadastrarDependentes(String nome){
+
+    }
+
+    public PessoaVO consultarPeloNome(String nome){
+        return null;
     }
 
 }
