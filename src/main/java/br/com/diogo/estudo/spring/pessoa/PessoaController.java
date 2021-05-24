@@ -23,14 +23,14 @@ public class PessoaController {
     *
     * */
 
-    public void cadastrar(String nome, Integer idade, Date dataNascimento, Float salario){
+    public void cadastrar(String nome, Integer idade, Date dataNascimento, Float salario, String cpf){
         PessoaVO fulano = new PessoaVO();
 
         fulano.setNome(nome);
         fulano.setIdade(idade);
         fulano.setDataNascimento(dataNascimento);
         fulano.setSalario(salario);
-        fulano.setCpf("33777562807");
+        fulano.setCpf(cpf);
 
 
         PessoaBusinnes pessoaBusinnes = new PessoaBusinnes();

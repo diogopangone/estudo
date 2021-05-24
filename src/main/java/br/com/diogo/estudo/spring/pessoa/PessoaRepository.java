@@ -7,6 +7,7 @@ public class PessoaRepository {
         System.out.println("Idate :"+ pessoa.getIdade());
         System.out.println("Data de nascimento :"+ pessoa.getDataNascimento());
         System.out.println("Salário :"+ pessoa.getSalario());
+        System.out.println("CPF :"+ pessoa.getCpf());
     }
 
 }
