@@ -14,6 +14,9 @@ public class PessoaBusinnes {
         if( pessoa.getIdade() == null ){
             throw new RuntimeException("Idate da pessoa é obrigatório!");
         }
+        if( pessoa.getDataNascimento() == null){
+            throw new RuntimeException("Data de nascimento é obrigatório");
+        }
 
         PessoaRepository pessoaRepository = new PessoaRepository();
 
