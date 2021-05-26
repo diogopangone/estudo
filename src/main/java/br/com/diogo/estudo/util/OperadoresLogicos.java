@@ -45,7 +45,7 @@ public class OperadoresLogicos {
         int nas;
         int ano = LocalDate.now().getYear();
         int result;
-        int c;
+
         Scanner idade = new Scanner(System.in);
         System.out.print("Qual sua data de nascimento: ");
         nas = idade.nextInt();
