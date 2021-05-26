@@ -1,12 +1,16 @@
 package br.com.diogo.estudo.spring.pessoa;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
 @Controller
 public class PessoaController {
 
+    @Autowired
+    private PessoaBusinnes pessoaBusinnes;
         /*
     *
     *
@@ -32,11 +36,12 @@ public class PessoaController {
         fulano.setSalario(salario);
         fulano.setCpf(cpf);
 
-
-        PessoaBusinnes pessoaBusinnes = new PessoaBusinnes();
-
         pessoaBusinnes.validarEcadastrar(fulano);
 
     }
 
+
+    public void cadastrarDependentes(String nome){
+        pessoaBusinnes.cadastrarDependentes(nome);
+    }
 }

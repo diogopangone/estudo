@@ -1,6 +1,9 @@
 package br.com.diogo.estudo.spring.pessoa;
 
-public class PessoaRepository {
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class PessoaRepository implements OperacoesBasicasRepository{
 
     public void cadastrarNaBaseDados(PessoaVO pessoa){
         System.out.println("Nome :"+ pessoa.getNome());
@@ -10,4 +13,13 @@ public class PessoaRepository {
         System.out.println("CPF :"+ pessoa.getCpf());
     }
 
+    @Override
+    public void cadastrar() {
+
+    }
+
+    @Override
+    public void consultar() {
+
+    }
 }
